@@ -1,0 +1,7 @@
+{
+  "name": "nila-prem-portfolio-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Serverless admin API (login + publish/upload) for the Nila Prem portfolio site. Deployed separately (e.g. on Vercel) from the static site (GitHub Pages).",
+  "engines": { "node": ">=18" }
+}

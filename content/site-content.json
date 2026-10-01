@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "siteTitle": "Nila Prem | Python & Django Developer",
+    "seoDescription": "Portfolio of Nila Prem, a Python & Django developer building backend systems, REST and GraphQL APIs, and declaration workflows for production customs platforms.",
+    "seoKeywords": "Nila Prem, Python developer, Django developer, GraphQL, REST API, PostgreSQL, Bangalore",
+    "favicon": "favicon.svg"
+  },
+  "sectionOrder": [
+    "home",
+    "about",
+    "skills",
+    "experience",
+    "projects",
+    "education",
+    "certifications",
+    "achievements",
+    "gallery",
+    "contact"
+  ],
+  "sectionVisibility": {
+    "home": true,
+    "about": true,
+    "skills": true,
+    "experience": true,
+    "projects": true,
+    "education": true,
+    "certifications": false,
+    "achievements": false,
+    "gallery": false,
+    "contact": true
+  },
+  "appearance": {
+    "fonts": {
+      "heading": "Playfair Display",
+      "accent": "Dancing Script",
+      "body": "Quicksand"
+    }
+  },
+  "home": {
+    "name": "Nila Prem",
+    "headline": "Python & Django Developer",
+    "tagline": "Backend systems that handle real declarations, real data, real scale.",
+    "badge": "Bangalore, India · Open to new roles",
+    "tags": [
+      "Python",
+      "Django",
+      "GraphQL",
+      "PostgreSQL",
+      "REST APIs"
+    ],
+    "photo": "",
+    "ctaContactText": "Get in touch",
+    "ctaResumeText": "Download Resume",
+    "resumeFile": "",
+    "photoStyle": "square",
+    "photoAnimation": "float-glow"
+  },
+  "about": {
+    "heading": "About Me",
+    "bio": "I'm a Python developer with hands-on experience in Django-based backend development, REST and GraphQL APIs, and database-driven web applications. My work centers on declaration workflows, business validations, and data processing systems for platforms that businesses rely on daily.\n\nI enjoy working closely with a team to turn complex business rules into clean, dependable code — and I'm looking to keep growing as a developer inside a product that ships.",
+    "location": "Bangalore, India",
+    "languages": [],
+    "stats": [
+      {
+        "value": "1.5+",
+        "label": "Years in production Django"
+      },
+      {
+        "value": "3",
+        "label": "Live declaration platforms"
+      },
+      {
+        "value": "2",
+        "label": "API standards — REST & GraphQL"
+      }
+    ],
+    "currently": {
+      "heading": "Currently",
+      "role": "Python Developer",
+      "company": "Synkcode",
+      "focus": "Dubai Customs platforms",
+      "stack": "Python · Django · PostgreSQL",
+      "since": "Nov 2025"
+    }
+  },
+  "skills": {
+    "heading": "Skills",
+    "subheading": "Everything I build with, gathered in one place.",
+    "items": [
+      "Python",
+      "Django",
+      "GraphQL",
+      "REST APIs",
+      "PostgreSQL",
+      "SQL",
+      "JavaScript",
+      "AJAX",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "C#",
+      "ASP.NET (MVC)",
+      "OpenCV",
+      "YOLO"
+    ]
+  },
+  "experience": {
+    "heading": "Experience",
+    "subheading": "Where I've built and shipped.",
+    "items": [
+      {
+        "role": "Python Developer",
+        "company": "Synkcode",
+        "duration": "Nov 2025 — Present",
+        "description": "",
+        "points": [
+          "Develop and maintain backend functionality for Dubai-based customs declaration platforms using Python, Django, and PostgreSQL — covering APIs, business logic, declaration workflows, and database operations.",
+          "Built declaration pool management, team management, audit trail tracking, and advanced search, plus declaration ownership, access management, and integration of user/business info through external APIs."
+        ],
+        "image": ""
+      },
+      {
+        "role": "Junior Software Engineer",
+        "company": "Suffix E Solutions",
+        "duration": "Apr 2024 — Nov 2025",
+        "description": "",
+        "points": [
+          "Developed web applications and designed websites, handling both frontend and backend tasks.",
+          "Trained students in Python, Django, C#, ASP.NET (MVC), REST API, Bootstrap, HTML, and CSS."
+        ],
+        "image": ""
+      }
+    ]
+  },
+  "projects": {
+    "heading": "Projects",
+    "subheading": "A few systems I've built end to end.",
+    "items": [
+      {
+        "title": "Declaration Management System",
+        "description": "A Python/Django customs-declaration platform for Dubai Customs, managing import/export declarations — creation, amendment, document management, cargo details, and customer records.",
+        "tags": [
+          "Python",
+          "Django",
+          "REST",
+          "GraphQL"
+        ],
+        "url": "",
+        "image": ""
+      },
+      {
+        "title": "Customs Declaration Management (CDM)",
+        "description": "A system for processing customs declarations and their workflows — Declaration Pool, Team Management, Audit Trail, Advanced Search, and access management.",
+        "tags": [
+          "Django",
+          "JavaScript",
+          "AJAX",
+          "SQL"
+        ],
+        "url": "",
+        "image": ""
+      },
+      {
+        "title": "Traffic Rule Violation Detection",
+        "description": "A real-time system detecting smoking, mobile usage, and driver drowsiness from a custom dataset, built for traffic surveillance and road safety.",
+        "tags": [
+          "YOLO",
+          "OpenCV",
+          "Python"
+        ],
+        "url": "",
+        "image": ""
+      },
+      {
+        "title": "Digital Menu",
+        "description": "A mobile-responsive commercial web application handling Products, Price, and Orders modules for a restaurant-style ordering flow.",
+        "tags": [
+          "ASP.NET",
+          "C#"
+        ],
+        "url": "",
+        "image": ""
+      }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "subheading": "",
+    "items": [
+      {
+        "degree": "B.Ed",
+        "institution": "All Saints College of Education, Kaliyakkavilai",
+        "score": "",
+        "year": "2021 — 2023"
+      },
+      {
+        "degree": "M.Sc. Maths",
+        "institution": "Stella Maris College, Chennai",
+        "score": "",
+        "year": "2019 — 2021"
+      },
+      {
+        "degree": "B.Sc. Maths",
+        "institution": "Karunya Institute of Science and Technology, Coimbatore",
+        "score": "",
+        "year": "2016 — 2019"
+      }
+    ]
+  },
+  "certifications": {
+    "heading": "Certifications",
+    "items": []
+  },
+  "achievements": {
+    "heading": "Highlights",
+    "subheading": "",
+    "items": []
+  },
+  "gallery": {
+    "heading": "Gallery",
+    "subheading": "",
+    "items": []
+  },
+  "contact": {
+    "heading": "Let's work together",
+    "subheading": "Open to Python/Django roles and backend-focused teams. Reach out and I'll get back to you soon.",
+    "phone": "+91 7598684491",
+    "email": "nilaprem05@gmail.com",
+    "location": "JL Jalahalli West, Bangalore North, 560015",
+    "socials": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/nilaprem"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Nilaprem"
+      },
+      {
+        "label": "WhatsApp",
+        "url": "https://wa.me/917598684491"
+      }
+    ],
+    "floating": {
+      "enabled": true,
+      "position": "right",
+      "whatsapp": {
+        "enabled": true,
+        "number": "",
+        "message": "Hi Nila, I came across your portfolio and would like to connect!"
+      },
+      "call": {
+        "enabled": true,
+        "number": ""
+      },
+      "email": {
+        "enabled": true,
+        "address": "",
+        "subject": "Enquiry from your portfolio"
+      }
+    }
+  }
+}
