@@ -246,16 +246,16 @@
       "position": "right",
       "whatsapp": {
         "enabled": true,
-        "number": "",
+        "number": "+917598684491",
         "message": "Hi Nila, I came across your portfolio and would like to connect!"
       },
       "call": {
         "enabled": true,
-        "number": ""
+        "number": "+917598684491"
       },
       "email": {
         "enabled": true,
-        "address": "",
+        "address": "nilaprem05gmail.com",
         "subject": "Enquiry from your portfolio"
       }
     }
