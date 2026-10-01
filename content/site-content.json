@@ -40,6 +40,12 @@
     "name": "Nila Prem",
     "headline": "Python & Django Developer",
     "tagline": "Backend systems that handle real declarations, real data, real scale.",
+    "photo": "media/images/1790883335597-ChatGPT-Image-Aug-31-2026-10_52_44-AM.png",
+    "ctaContactText": "Get in touch",
+    "ctaResumeText": "Click to Download Resume",
+    "resumeFile": "media/files/1790883184563-Nilaprem_JL__Resume.pdf",
+    "photoStyle": "square",
+    "photoAnimation": "float-glow",
     "badge": "Bangalore, India · Open to new roles",
     "tags": [
       "Python",
@@ -47,13 +53,7 @@
       "GraphQL",
       "PostgreSQL",
       "REST APIs"
-    ],
-    "photo": "",
-    "ctaContactText": "Get in touch",
-    "ctaResumeText": "Download Resume",
-    "resumeFile": "",
-    "photoStyle": "square",
-    "photoAnimation": "float-glow"
+    ]
   },
   "about": {
     "heading": "About Me",
