@@ -31,7 +31,7 @@
   },
   "appearance": {
     "fonts": {
-      "heading": "Sacramento",
+      "heading": "Playfair Display",
       "accent": "Dancing Script",
       "body": "Quicksand"
     }
