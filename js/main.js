@@ -122,7 +122,7 @@
   function renderAbout(d) {
     var langs = d.languages.map(function (l) { return '<span class="fact-pill">' + esc(l) + "</span>"; }).join("");
     var stats = d.stats.filter(function (x) { return x.value || x.label; }).map(function (x, i) {
-      return '<div class="stat ' + reveal(i + 1) + '"><div class="num" data-count>' + esc(x.value) + '</div><div class="label">' + esc(x.label) + "</div></div>";
+      return '<div class="stat ' + reveal(i + 1) + '"><div class="num" data-count data-final="' + esc(x.value) + '">' + esc(x.value) + '</div><div class="label">' + esc(x.label) + "</div></div>";
     }).join("");
     var cur = d.currently, rows = [["Role", cur.role], ["Company", cur.company], ["Focus", cur.focus], ["Stack", cur.stack], ["Since", cur.since]]
       .filter(function (r) { return r[1]; });
@@ -218,7 +218,7 @@
   function renderAchievements(d) {
     var items = d.items.map(function (a, i) {
       var metrics = a.metrics.filter(function (m) { return m && (m.value || m.label); }).map(function (m) {
-        return '<div class="achieve-stat"><div class="num" data-count>' + esc(m.value) + '</div><div class="label">' + esc(m.label) + "</div></div>";
+        return '<div class="achieve-stat"><div class="num" data-count data-final="' + esc(m.value) + '">' + esc(m.value) + '</div><div class="label">' + esc(m.label) + "</div></div>";
       }).join("");
       return '<article class="card achieve-card ' + reveal(i) + '">' +
         thumb(a.image, a.title || a.period, a.summary, a.title || a.period) +
@@ -307,23 +307,32 @@
   /* ---------- behaviours ---------- */
   var revealObserver, navObserver;
 
+  // Animates a number from 0 up to the value saved in the admin panel.
+  // The real value is remembered in data-final and is ALWAYS what ends up on screen,
+  // so the animation can never leave a half-counted number (e.g. "0.5+" instead of "1.5+").
   function countUp(el) {
-    var text = el.textContent;
+    if (el.getAttribute("data-counted") === "1") return;   // nested .reveal blocks can trigger this twice
+    el.setAttribute("data-counted", "1");
+    var text = el.getAttribute("data-final");
+    if (text == null) text = el.textContent;
     var m = text.match(/^(\D*?)(\d[\d,]*(?:\.\d+)?)(\D*)$/);
-    if (!m || reduceMotion) return;
+    if (!m || reduceMotion) { el.textContent = text; return; }
     var target = parseFloat(m[2].replace(/,/g, ""));
-    if (!isFinite(target) || target <= 0) return;
+    if (!isFinite(target) || target <= 0) { el.textContent = text; return; }
     var hasComma = m[2].indexOf(",") > -1, decimals = (m[2].split(".")[1] || "").length;
-    var start = performance.now(), dur = 900;
+    var start = performance.now(), dur = 900, done = false;
     function fmt(n) {
       var s = decimals ? n.toFixed(decimals) : String(Math.round(n));
       return hasComma ? Number(s).toLocaleString("en-IN", { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) : s;
     }
+    function finish() { if (done) return; done = true; el.textContent = text; }
     el.setAttribute("aria-label", text);
+    // safety net: browsers pause animation frames in background tabs, so always land on the real value
+    setTimeout(finish, dur + 150);
     (function tick(now) {
+      if (done) return;
       var t = Math.min(1, (now - start) / dur), eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = m[1] + fmt(target * eased) + m[3];
-      if (t < 1) requestAnimationFrame(tick); else el.textContent = text;
+      if (t < 1) { el.textContent = m[1] + fmt(target * eased) + m[3]; requestAnimationFrame(tick); } else finish();
     })(start);
   }
 
